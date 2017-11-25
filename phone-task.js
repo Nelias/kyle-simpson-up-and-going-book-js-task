@@ -1,8 +1,9 @@
+const PRICE_OF_ONE_PHONE = 200;
+const PRICE_OF_ONE_ACCESSORY = 10;
+const TAX_RATE = 0.15;
+
 var moneyInMyBank = 3000;
-var priceOfOnePhone = 200;
-var priceOfOneAccessory = 10;
-var taxRate = 0.15;
-var totalPrice = priceOfOnePhone + priceOfOneAccessory;
+var totalPrice = PRICE_OF_ONE_PHONE + PRICE_OF_ONE_ACCESSORY;
 var numberOfPhones = 0;
 
 while (moneyInMyBank > 0) {
@@ -11,7 +12,7 @@ while (moneyInMyBank > 0) {
 }
 
 function taxAdder(countedPrice) {
-  return countedPrice + countedPrice * taxRate;
+  return countedPrice + countedPrice * TAX_RATE;
 }
 
 var amountAfterTax = taxAdder(numberOfPhones * totalPrice);
